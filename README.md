@@ -3,15 +3,13 @@ Place a class in the Commands directory annotated with `@Command`
 and it will be picked up dynamically.
 
 ```typescript
+import { RichEmbed }     from 'discord.js';
 import { CommandBase }   from '../Common/CommandBase';
 import { Command }       from '../Common/CommandDecorator';
 import { CommandParser } from '../Common/CommandParser';
 
-/**
- * Replies back to the user with "pong!"
- */
 @Command
-export class PingCommand extends CommandBase {
+export class TestCommand extends CommandBase {
 
     public constructor() {
 
@@ -27,7 +25,7 @@ export class PingCommand extends CommandBase {
                 name: 'chars',
                 description: 'An argument containing a word.',
                 required: true,
-                pattern: '\\w+'
+                pattern: '[a-zA-Z]+'
 
             }, {
 
@@ -56,9 +54,11 @@ export class PingCommand extends CommandBase {
      */
     public run(command: CommandParser): void {
 
-        command.message.reply('Test received!');
+        command.message.reply(new RichEmbed().setTitle('Test received!')
+                                             .setDescription(`argument 1: ${ command.arguments[ 0 ].name }=${ command.arguments[ 0 ].value }\nargument 2: ${ command.arguments[ 1 ].name }=${ command.arguments[ 1 ].value }`));
 
     }
-
+    
 }
 ```
+![TestCommand Output](assets/testcommand.png)
