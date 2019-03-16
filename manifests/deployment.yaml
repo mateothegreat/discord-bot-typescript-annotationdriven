@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sis
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: sis
+      version: 1
+  template:
+    metadata:
+      labels:
+        app: sis
+        version: 1
+    spec:
+      dnsPolicy: ClusterFirst
+      containers:
+        - name: sis
+          image: ${image}
+          resources:
+            limits:
+              memory: "800Mi"
+              cpu: "500m"
+          env:
+            - name: PORT
+              value: 3000
+          ports:
+            - containerPort: 3000

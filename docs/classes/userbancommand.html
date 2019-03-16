@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Config | discord-bot-typescript-annotationdriven</title>
+	<title>UserBanCommand | discord-bot-typescript-annotationdriven</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,21 +56,33 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="config.html">Config</a>
+					<a href="userbancommand.html">UserBanCommand</a>
 				</li>
 			</ul>
-			<h1>Class Config</h1>
+			<h1>Class UserBanCommand</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Bans a user from the server. Usage: &gt;ban name=someusername</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Config</span>
+						<a href="commandbase.html" class="tsd-signature-type">CommandBase</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">UserBanCommand</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -79,25 +91,94 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="userbancommand.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="config.html#command_prefix" class="tsd-kind-icon">COMMAND_<wbr>PREFIX</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="userbancommand.html#config" class="tsd-kind-icon">config</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="userbancommand.html#run" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>User<wbr>Ban<wbr>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="userbancommand.html" class="tsd-signature-type">UserBanCommand</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Commands/UserBanCommand.ts#L12">Commands/UserBanCommand.ts:12</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="userbancommand.html" class="tsd-signature-type">UserBanCommand</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-					<a name="command_prefix" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> COMMAND_<wbr>PREFIX</h3>
-					<div class="tsd-signature tsd-kind-icon">COMMAND_<wbr>PREFIX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;&gt;&quot;</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="config" class="tsd-anchor"></a>
+					<h3>config</h3>
+					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <a href="commandconfig.html" class="tsd-signature-type">CommandConfig</a></div>
 					<aside class="tsd-sources">
+						<p>Inherited from <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#config">config</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/20996df/src/Common/Config.ts#L3">Common/Config.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Common/CommandBase.ts#L10">Common/CommandBase.ts:10</a></li>
 						</ul>
 					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="run" class="tsd-anchor"></a>
+					<h3>run</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><a href="commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#run">run</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Commands/UserBanCommand.ts#L44">Commands/UserBanCommand.ts:44</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when a command matches config.name.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>command: <a href="commandparser.html" class="tsd-signature-type">CommandParser</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Parsed out commamd</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -118,6 +199,9 @@
 						<a href="bot.html" class="tsd-kind-icon">Bot</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="channelsettopiccommand.html" class="tsd-kind-icon">Channel<wbr>Set<wbr>Topic<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="chatmessage.html" class="tsd-kind-icon">Chat<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -135,18 +219,6 @@
 					<li class=" tsd-kind-class">
 						<a href="commandparser.html" class="tsd-kind-icon">Command<wbr>Parser</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="config.html" class="tsd-kind-icon">Config</a>
-						<ul>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-								<a href="config.html#command_prefix" class="tsd-kind-icon">COMMAND_<wbr>PREFIX</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="db.html" class="tsd-kind-icon">DB</a>
 					</li>
@@ -157,10 +229,28 @@
 						<a href="guildmemberaddmessagecommand.html" class="tsd-kind-icon">Guild<wbr>Member<wbr>Add<wbr>Message<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="helpcommand.html" class="tsd-kind-icon">Help<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="karmaleaderboardcommand.html" class="tsd-kind-icon">Karma<wbr>Leaderboard<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="karmapoint.html" class="tsd-kind-icon">Karma<wbr>Point</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="karmapointcommand.html" class="tsd-kind-icon">Karma<wbr>Point<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="logmessagescommand.html" class="tsd-kind-icon">Log<wbr>Messages<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="pingcommand.html" class="tsd-kind-icon">Ping<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="rolerestrictedcommand.html" class="tsd-kind-icon">Role<wbr>Restricted<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="testcommand.html" class="tsd-kind-icon">Test<wbr>Command</a>
@@ -168,8 +258,32 @@
 					<li class=" tsd-kind-class">
 						<a href="user.html" class="tsd-kind-icon">User</a>
 					</li>
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
+						<a href="userbancommand.html" class="tsd-kind-icon">User<wbr>Ban<wbr>Command</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="userbancommand.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="userbancommand.html#config" class="tsd-kind-icon">config</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="userbancommand.html#run" class="tsd-kind-icon">run</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-class">
+						<a href="userunbancommand.html" class="tsd-kind-icon">User<wbr>UnBan<wbr>Command</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="usersservice.html" class="tsd-kind-icon">Users<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="wikipediasearchcommand.html" class="tsd-kind-icon">Wikipedia<wbr>Search<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="../globals.html#event_object" class="tsd-kind-icon">EVENT_<wbr>OBJECT</a>

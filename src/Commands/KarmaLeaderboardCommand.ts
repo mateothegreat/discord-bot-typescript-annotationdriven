@@ -44,10 +44,6 @@ export class KarmaLeaderboardCommand extends CommandBase {
                                 .limit(22)
                                 .getRawMany();
 
-        let fields: any[] = [];
-
-        console.log(results);
-
         const embed = new RichEmbed().setTitle('Karma Points Leaderboard')
                                      .setColor(3447003);
 

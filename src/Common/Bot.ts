@@ -110,7 +110,7 @@ class Bot {
     public preCommand(event: Event, parsedCommand: CommandParser): boolean {
 
         const command: CommandBase = this.getCommandByName(parsedCommand.command);
-  
+
         if (command) {
 
             let errors: string[] = [];
@@ -120,8 +120,23 @@ class Bot {
             //
             if (command.config.roles) {
 
+                let roleMatched = false;
+
                 for (let i = 0; i < command.config.roles.length; i++) {
 
+                    if (parsedCommand.obj.member.roles.find(role => role.name === command.config.roles[ i ])) {
+
+                        roleMatched = true;
+
+                        break;
+
+                    }
+
+                }
+
+                if (!roleMatched) {
+
+                    errors.push('You do not have the required role to run this command.');
 
                 }
 
