@@ -2,6 +2,8 @@
 Place a class in the Commands directory annotated with `@Command` 
 and it will be picked up dynamically.
 
+![TestCommand Output](assets/testcommand.png)
+
 ```typescript
 import { RichEmbed }     from 'discord.js';
 import { CommandBase }   from '../Common/CommandBase';
@@ -61,4 +63,4 @@ export class TestCommand extends CommandBase {
     
 }
 ```
-![TestCommand Output](assets/testcommand.png)
+![TestCommand Output](assets/testcommand-error-validation.png)
