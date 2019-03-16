@@ -1,12 +1,32 @@
-import { Message }                     from 'discord.js';
-import { CommandConfig, CommandParam } from './CommandConfig';
+import { Message }         from 'discord.js';
+import { CommandArgument } from './CommandArgument';
 
+/**
+ * Takes in a message and parses it out into a Command Class Instance.
+ */
 export class CommandParser {
 
+    /**
+     * Name of the command parsed out.
+     */
     public command: string;
-    public arguments: CommandParam[] = [];
+
+    /**
+     * Arguments parsed out between commas.
+     */
+    public arguments: CommandArgument[] = [];
+
+    /**
+     * Discord.js Message Object.
+     */
     public message: Message;
 
+    /**
+     * @description Class Constructor requiring a Discord.js Message Object.
+     *
+     * @param message Discord.js message object.
+     *
+     */
     public constructor(message: Message) {
 
         const matches = message.content.match(/^(.*?)\s+(.*)/);
@@ -32,15 +52,23 @@ export class CommandParser {
 
         }
 
-        // this.message = message;
+        this.message = message;
 
     }
 
-    public getArgumentByName(name: string): CommandConfig {
+    /**
+     * @description Retrives a parsed argument by it's name.
+     *
+     * @param commandName Name of the argument (name=somecommand).
+     *
+     * @returns CommandArgument CommandArgument or null if not found.
+     *
+     */
+    public getArgumentByName(commandName: string): CommandArgument {
 
-        for (let i = 0; this.arguments.length; i++) {
+        for (let i = 0; i < this.arguments.length; i++) {
 
-            if (this.arguments[ i ].name === name) {
+            if (this.arguments[ i ].name === commandName) {
 
                 return this.arguments[ i ];
 

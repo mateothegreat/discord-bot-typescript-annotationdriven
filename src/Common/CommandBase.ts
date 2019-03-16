@@ -1,6 +1,10 @@
 import { CommandConfig } from './CommandConfig';
 import { CommandParser } from './CommandParser';
 
+/*
+ * Base class that all commands inherit from.
+ *
+ */
 export class CommandBase {
 
     public config: any;

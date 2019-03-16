@@ -1,9 +1,8 @@
-import * as Discord      from 'discord.js';
-import { Message }       from 'discord.js';
-import * as dotenv       from 'dotenv';
-import { CommandBase }   from './CommandBase';
-import { CommandConfig } from './CommandConfig';
-import { CommandParser } from './CommandParser';
+import * as Discord           from 'discord.js';
+import { Message, RichEmbed } from 'discord.js';
+import * as dotenv            from 'dotenv';
+import { CommandBase }        from './CommandBase';
+import { CommandParser }      from './CommandParser';
 
 //
 // Load .env into process.env
@@ -63,10 +62,16 @@ class Bot {
      */
     public handleMessage(message: Message): void {
 
+        //
+        // Prevent the bot from talking to itself (this would cause an endless loop).
+        //
         if (!message.author.bot) {
 
             const command = new CommandParser(message);
 
+            //
+            // Run the preCommand validation checks before executing runCommand.
+            //
             if (this.preCommand(command)) {
 
                 this.runCommand(command);
@@ -77,30 +82,72 @@ class Bot {
 
     }
 
-    public preCommand(commandParser: CommandParser): boolean {
+    /*
+     * Perform validation checks.
+     *
+     * @param CommandParser commandParser The parsed command.
+     *
+     */
+    public preCommand(parsedCommand: CommandParser): boolean {
 
-        const commandConfig = this.getCommandByName(commandParser.command);
+        const command: CommandBase = this.getCommandByName(parsedCommand.command);
 
-        if (!!commandConfig) {
+        if (!!command) {
 
-            console.log(commandConfig);
-            console.log(commandParser);
+            let errors: string[] = [];
 
-            for (let i = 0; i < commandConfig.params.length; i++) {
+            for (let i = 0; i < command.config.params.length; i++) {
 
-                // console.log(commandConfig.params[ i ]);
+                const argument = parsedCommand.getArgumentByName(command.config.params[ i ].name);
 
-                if (commandConfig.params[ i ].required && !commandParser.getArgumentByName(commandConfig.params[ i ].name)) {
+                if (command.config.params[ i ].required && !argument) {
 
-                    console.log(12312312);
+                    errors.push(`The parameter "${ command.config.params[ i ].name }" (${ command.config.params[ i ].description }) is required.`);
+
+                } else {
+
+                    //
+                    // Check to see if the argument passed exists in the commands accetpable parameters.
+                    //
+                    if (argument) {
+
+                        const regex = new RegExp(command.config.params[ i ].pattern);
+
+                        if (!argument.value.match(regex)) {
+
+                            errors.push(`The parameter "${ command.config.params[ i ].name }" with the value "${ argument.value }" is invalid (Acceptable pattern: ${ command.config.params[ i ].pattern }).`);
+
+                        }
+
+                    }
 
                 }
+
+
+            }
+
+            //
+            // Send the error messages back to the user.
+            //
+            if (errors.length > 0) {
+
+                parsedCommand.message.reply(new RichEmbed().setTitle('The following errors ocurred:')
+                                                           .setDescription(errors.join("\n\t")));
+
+                return false;
+
+            } else {
+
+                return true;
 
             }
 
         }
 
-        return false;
+        //
+        // Return true by default which means the command did not have any validations.
+        //
+        return true;
 
     }
 
@@ -114,13 +161,11 @@ class Bot {
 
         for (let i = 0; i < this.commands.length; i++) {
 
-            console.log(this.commands[ i ].config.name);
-
             if (this.commands[ i ].config.name === command.command || this.commands[ i ].config.name === '*') {
 
-                this.commands[ i ].run(command);
+                console.log(`Running Command: ${ this.commands[ i ].config.name }`);
 
-                console.log(`Command Ran: ${ this.commands[ i ].config.name }`);
+                this.commands[ i ].run(command);
 
             }
 
@@ -128,13 +173,13 @@ class Bot {
 
     }
 
-    public getCommandByName(name: string): CommandConfig {
+    public getCommandByName(name: string): CommandBase {
 
         for (let i = 0; i < this.commands.length; i++) {
 
             if (this.commands[ i ].config.name === name) {
 
-                return this.commands[ i ].config;
+                return this.commands[ i ];
 
             }
 

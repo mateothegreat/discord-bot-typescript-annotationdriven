@@ -13,19 +13,20 @@ export class TestCommand extends CommandBase {
         super({
 
             name: '>test',
+            description: 'Simple test command that sends a reply if validation succeeds.',
             params: [ {
 
                 name: 'chars',
                 description: 'An argument containing a word.',
                 required: true,
-                pattern: '\w+'
+                pattern: '\\w+'
 
             }, {
 
                 name: 'num',
                 description: 'An argument containing numbers.',
                 required: true,
-                pattern: '\d+'
+                pattern: '\\d+'
 
             }, {
 
@@ -46,7 +47,7 @@ export class TestCommand extends CommandBase {
 
         // console.log(command);
 
-        // command.message.reply('Test received!');
+        command.message.reply('Test received!');
 
     }
 

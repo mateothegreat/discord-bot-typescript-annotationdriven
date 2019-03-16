@@ -12,7 +12,8 @@ export class AllMessagesCommand extends CommandBase {
         //
         super({
 
-            name: '*'
+            name: '*',
+            description: 'Logs all messages to the database.'
 
         });
 
@@ -23,7 +24,7 @@ export class AllMessagesCommand extends CommandBase {
     //
     public run(command: CommandParser): void {
 
-        // console.log(command.message.content);
+        console.log(command.message.content);
 
     }
 

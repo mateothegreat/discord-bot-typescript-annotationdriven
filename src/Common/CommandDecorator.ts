@@ -1,9 +1,11 @@
 import { BOT } from './Bot';
 
-//
-// @Command Class Annotation
-//
-export function Command(target: any): any {
+/*
+ * Command class annotation use to automatically "register" instances into BOT.
+ *
+ * @param any target Command Class
+ */
+export function Command(target: any): void {
 
     //
     // Register the class annotated with @Command
