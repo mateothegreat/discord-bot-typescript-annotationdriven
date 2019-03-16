@@ -17,7 +17,7 @@ class Bot {
     //
     // Discord.js Client
     //
-    private client: any = new Discord.Client();
+    public client: any = new Discord.Client();
 
     //
     // Array of Command Class References
@@ -35,9 +35,9 @@ class Bot {
 
     }
 
-    //
-    // Start the bot up
-    //
+    /**
+     * Start the bot.
+     */
     public start(): void {
 
         //
@@ -210,6 +210,11 @@ class Bot {
 
     }
 
+    /**
+     * Retrieves a registered command by it's name.
+     *
+     * @param name Name of the command.
+     */
     public getCommandByName(name: string): CommandBase {
 
         for (let i = 0; i < this.commands.length; i++) {
@@ -224,6 +229,9 @@ class Bot {
 
     }
 
+    /**
+     * Retrieves a registered command by it's event type.
+     */
     public getCommandByEvent(event: Event): CommandBase {
 
         for (let i = 0; i < this.commands.length; i++) {
