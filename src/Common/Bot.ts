@@ -2,6 +2,7 @@ import * as Discord      from 'discord.js';
 import { Message }       from 'discord.js';
 import * as dotenv       from 'dotenv';
 import { CommandBase }   from './CommandBase';
+import { CommandConfig } from './CommandConfig';
 import { CommandParser } from './CommandParser';
 
 //
@@ -37,7 +38,11 @@ class Bot {
     //
     public start(): void {
 
-        this.client.on('message', (message: Message) => this.handleMessage(message));
+        this.client.on('message', (message: Message) => {
+
+            this.handleMessage(message);
+
+        });
 
         this.client.login(process.env.TOKEN);
 
@@ -58,9 +63,44 @@ class Bot {
      */
     public handleMessage(message: Message): void {
 
-        const command = new CommandParser(message);
+        if (!message.author.bot) {
 
-        this.runCommand(command);
+            const command = new CommandParser(message);
+
+            if (this.preCommand(command)) {
+
+                this.runCommand(command);
+
+            }
+
+        }
+
+    }
+
+    public preCommand(commandParser: CommandParser): boolean {
+
+        const commandConfig = this.getCommandByName(commandParser.command);
+
+        if (!!commandConfig) {
+
+            console.log(commandConfig);
+            console.log(commandParser);
+
+            for (let i = 0; i < commandConfig.params.length; i++) {
+
+                // console.log(commandConfig.params[ i ]);
+
+                if (commandConfig.params[ i ].required && !commandParser.getArgumentByName(commandConfig.params[ i ].name)) {
+
+                    console.log(12312312);
+
+                }
+
+            }
+
+        }
+
+        return false;
 
     }
 
@@ -74,11 +114,27 @@ class Bot {
 
         for (let i = 0; i < this.commands.length; i++) {
 
-            if (this.commands[ i ].config.name === command.command) {
+            console.log(this.commands[ i ].config.name);
+
+            if (this.commands[ i ].config.name === command.command || this.commands[ i ].config.name === '*') {
 
                 this.commands[ i ].run(command);
 
                 console.log(`Command Ran: ${ this.commands[ i ].config.name }`);
+
+            }
+
+        }
+
+    }
+
+    public getCommandByName(name: string): CommandConfig {
+
+        for (let i = 0; i < this.commands.length; i++) {
+
+            if (this.commands[ i ].config.name === name) {
+
+                return this.commands[ i ].config;
 
             }
 

@@ -12,7 +12,28 @@ export class TestCommand extends CommandBase {
         //
         super({
 
-            name: 'test'
+            name: '>test',
+            params: [ {
+
+                name: 'chars',
+                description: 'An argument containing a word.',
+                required: true,
+                pattern: '\w+'
+
+            }, {
+
+                name: 'num',
+                description: 'An argument containing numbers.',
+                required: true,
+                pattern: '\d+'
+
+            }, {
+
+                name: 'opt',
+                description: 'An optional argument.',
+                required: false,
+
+            } ]
 
         });
 
@@ -23,7 +44,9 @@ export class TestCommand extends CommandBase {
     //
     public run(command: CommandParser): void {
 
-        command.message.reply('Test received!');
+        // console.log(command);
+
+        // command.message.reply('Test received!');
 
     }
 
