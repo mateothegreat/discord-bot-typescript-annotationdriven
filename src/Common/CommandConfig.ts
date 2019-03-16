@@ -1,3 +1,5 @@
+import { CommandParam } from './CommandParam';
+
 export class CommandConfig {
 
     public name: string;
@@ -5,12 +7,3 @@ export class CommandConfig {
 
 }
 
-export class CommandParam {
-
-    public name: string;
-    public description?: string;
-    public required?: boolean;
-    public pattern?: string;
-    public value?: string;
-
-}

@@ -38,13 +38,7 @@ export class CommandParser {
 
     public getArgumentByName(name: string): CommandConfig {
 
-        console.log(this.arguments);
-        console.log(name);
-
         for (let i = 0; this.arguments.length; i++) {
-            console.log(i);
-
-            console.log(this.arguments[ i ]);
 
             if (this.arguments[ i ].name === name) {
 
