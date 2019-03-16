@@ -2,6 +2,7 @@ import { Connection, createConnection } from 'typeorm';
 import { Logger }                       from '../Common/Logger';
 import { ChatMessage }                  from './Entities/ChatMessage';
 import { KarmaPoint }                   from './Entities/KarmaPoint';
+import { Macro }                        from './Entities/Macro';
 import { User }                         from './Entities/User';
 
 export class DB {
@@ -26,7 +27,8 @@ export class DB {
 
                     User,
                     ChatMessage,
-                    KarmaPoint
+                    KarmaPoint,
+                    Macro
 
                 ],
                 synchronize: true,

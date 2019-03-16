@@ -38,16 +38,22 @@ export class HelpCommand extends CommandBase {
 
         let groups: any = {};
 
+        //
+        // Loop through each registered command.
+        //
         for (let i = 0; i < BOT.commands.length; i++) {
 
             let roleMatched = false;
 
+            //
+            // Perform role based validation.
+            //
             if (BOT.commands[ i ].config.roles) {
 
                 for (let j = 0; j < BOT.commands[ i ].config.roles.length; j++) {
 
                     if (command.obj.member.roles.find(role => role.name === BOT.commands[ i ].config.roles[ j ])) {
-  
+
                         roleMatched = true;
 
                         break;
