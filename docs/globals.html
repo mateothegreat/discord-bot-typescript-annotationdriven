@@ -68,9 +68,14 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
+							<h3>Enumerations</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-enum"><a href="enums/event.html" class="tsd-kind-icon">Event</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
 							<h3>Classes</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-class"><a href="classes/allmessagescommand.html" class="tsd-kind-icon">All<wbr>Messages<wbr>Command</a></li>
 								<li class="tsd-kind-class tsd-is-not-exported"><a href="classes/bot.html" class="tsd-kind-icon">Bot</a></li>
 								<li class="tsd-kind-class"><a href="classes/chatmessage.html" class="tsd-kind-icon">Chat<wbr>Message</a></li>
 								<li class="tsd-kind-class"><a href="classes/commandargument.html" class="tsd-kind-icon">Command<wbr>Argument</a></li>
@@ -80,10 +85,20 @@
 								<li class="tsd-kind-class"><a href="classes/commandparser.html" class="tsd-kind-icon">Command<wbr>Parser</a></li>
 								<li class="tsd-kind-class"><a href="classes/config.html" class="tsd-kind-icon">Config</a></li>
 								<li class="tsd-kind-class"><a href="classes/db.html" class="tsd-kind-icon">DB</a></li>
+								<li class="tsd-kind-class"><a href="classes/flipcommand.html" class="tsd-kind-icon">Flip<wbr>Command</a></li>
+								<li class="tsd-kind-class"><a href="classes/guildmemberaddmessagecommand.html" class="tsd-kind-icon">Guild<wbr>Member<wbr>Add<wbr>Message<wbr>Command</a></li>
+								<li class="tsd-kind-class"><a href="classes/logmessagescommand.html" class="tsd-kind-icon">Log<wbr>Messages<wbr>Command</a></li>
 								<li class="tsd-kind-class"><a href="classes/pingcommand.html" class="tsd-kind-icon">Ping<wbr>Command</a></li>
 								<li class="tsd-kind-class"><a href="classes/testcommand.html" class="tsd-kind-icon">Test<wbr>Command</a></li>
 								<li class="tsd-kind-class"><a href="classes/user.html" class="tsd-kind-icon">User</a></li>
 								<li class="tsd-kind-class"><a href="classes/usersservice.html" class="tsd-kind-icon">Users<wbr>Service</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Type aliases</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-type-alias"><a href="globals.html#event_object" class="tsd-kind-icon">EVENT_<wbr>OBJECT</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#message_type" class="tsd-kind-icon">MESSAGE_<wbr>TYPE</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -102,6 +117,29 @@
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Type aliases</h2>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="event_object" class="tsd-anchor"></a>
+					<h3>EVENT_<wbr>OBJECT</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>OBJECT<span class="tsd-signature-symbol">:</span> <a href="classes/commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">GuildMember</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/EventObjectType.ts#L4">Common/EventObjectType.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="message_type" class="tsd-anchor"></a>
+					<h3>MESSAGE_<wbr>TYPE</h3>
+					<div class="tsd-signature tsd-kind-icon">MESSAGE_<wbr>TYPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Message</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">GuildMember</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/CommandParser.ts#L4">Common/CommandParser.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Variables</h2>
 				<section class="tsd-panel tsd-member tsd-kind-variable">
 					<a name="bot" class="tsd-anchor"></a>
@@ -109,7 +147,7 @@
 					<div class="tsd-signature tsd-kind-icon">BOT<span class="tsd-signature-symbol">:</span> <a href="classes/bot.html" class="tsd-signature-type">Bot</a><span class="tsd-signature-symbol"> =&nbsp;new Bot()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L192">Common/Bot.ts:192</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L243">Common/Bot.ts:243</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -126,7 +164,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/CommandDecorator.ts#L8">Common/CommandDecorator.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/CommandDecorator.ts#L8">Common/CommandDecorator.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -151,8 +189,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="classes/allmessagescommand.html" class="tsd-kind-icon">All<wbr>Messages<wbr>Command</a>
+					<li class=" tsd-kind-enum">
+						<a href="enums/event.html" class="tsd-kind-icon">Event</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-not-exported">
 						<a href="classes/bot.html" class="tsd-kind-icon">Bot</a>
@@ -182,6 +220,15 @@
 						<a href="classes/db.html" class="tsd-kind-icon">DB</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/flipcommand.html" class="tsd-kind-icon">Flip<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/guildmemberaddmessagecommand.html" class="tsd-kind-icon">Guild<wbr>Member<wbr>Add<wbr>Message<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="classes/logmessagescommand.html" class="tsd-kind-icon">Log<wbr>Messages<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/pingcommand.html" class="tsd-kind-icon">Ping<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -192,6 +239,12 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/usersservice.html" class="tsd-kind-icon">Users<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#event_object" class="tsd-kind-icon">EVENT_<wbr>OBJECT</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#message_type" class="tsd-kind-icon">MESSAGE_<wbr>TYPE</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#bot" class="tsd-kind-icon">BOT</a>

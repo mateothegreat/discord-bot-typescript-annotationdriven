@@ -88,11 +88,14 @@
 						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#getcommandbyevent" class="tsd-kind-icon">get<wbr>Command<wbr>ByEvent</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#getcommandbyname" class="tsd-kind-icon">get<wbr>Command<wbr>ByName</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#handleevent" class="tsd-kind-icon">handle<wbr>Event</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#handlemessage" class="tsd-kind-icon">handle<wbr>Message</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#precommand" class="tsd-kind-icon">pre<wbr>Command</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#register" class="tsd-kind-icon">register</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#runcommand" class="tsd-kind-icon">run<wbr>Command</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#runevent" class="tsd-kind-icon">run<wbr>Event</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="bot.html#start" class="tsd-kind-icon">start</a></li>
 							</ul>
 						</section>
@@ -107,7 +110,7 @@
 					<div class="tsd-signature tsd-kind-icon">client<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;new Discord.Client()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L17">Common/Bot.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L20">Common/Bot.ts:20</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -117,13 +120,36 @@
 					<div class="tsd-signature tsd-kind-icon">commands<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="commandbase.html" class="tsd-signature-type">CommandBase</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L22">Common/Bot.ts:22</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L25">Common/Bot.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getcommandbyevent" class="tsd-anchor"></a>
+					<h3>get<wbr>Command<wbr>ByEvent</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Command<wbr>ByEvent<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../enums/event.html" class="tsd-signature-type">Event</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="commandbase.html" class="tsd-signature-type">CommandBase</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L227">Common/Bot.ts:227</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <a href="../enums/event.html" class="tsd-signature-type">Event</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="commandbase.html" class="tsd-signature-type">CommandBase</a></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 					<a name="getcommandbyname" class="tsd-anchor"></a>
 					<h3>get<wbr>Command<wbr>ByName</h3>
@@ -134,7 +160,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L176">Common/Bot.ts:176</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L213">Common/Bot.ts:213</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -148,22 +174,62 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-					<a name="handlemessage" class="tsd-anchor"></a>
-					<h3>handle<wbr>Message</h3>
+					<a name="handleevent" class="tsd-anchor"></a>
+					<h3>handle<wbr>Event</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">handle<wbr>Message<span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Message</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Event<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../enums/event.html" class="tsd-signature-type">Event</a>, eventobject<span class="tsd-signature-symbol">: </span><a href="../globals.html#event_object" class="tsd-signature-type">EVENT_OBJECT</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L63">Common/Bot.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L66">Common/Bot.ts:66</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Handle an incoming event.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <a href="../enums/event.html" class="tsd-signature-type">Event</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Event type.</p>
+									</div>
+								</li>
+								<li>
+									<h5>eventobject: <a href="../globals.html#event_object" class="tsd-signature-type">EVENT_OBJECT</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Event Object from discord.js.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="handlemessage" class="tsd-anchor"></a>
+					<h3>handle<wbr>Message</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">handle<wbr>Message<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../enums/event.html" class="tsd-signature-type">Event</a>, message<span class="tsd-signature-symbol">: </span><a href="../globals.html#message_type" class="tsd-signature-type">MESSAGE_TYPE</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L79">Common/Bot.ts:79</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>message: <span class="tsd-signature-type">Message</span></h5>
+									<h5>event: <a href="../enums/event.html" class="tsd-signature-type">Event</a></h5>
+								</li>
+								<li>
+									<h5>message: <a href="../globals.html#message_type" class="tsd-signature-type">MESSAGE_TYPE</a></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -174,17 +240,20 @@
 					<a name="precommand" class="tsd-anchor"></a>
 					<h3>pre<wbr>Command</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">pre<wbr>Command<span class="tsd-signature-symbol">(</span>parsedCommand<span class="tsd-signature-symbol">: </span><a href="commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">pre<wbr>Command<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../enums/event.html" class="tsd-signature-type">Event</a>, parsedCommand<span class="tsd-signature-symbol">: </span><a href="commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L91">Common/Bot.ts:91</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L107">Common/Bot.ts:107</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <a href="../enums/event.html" class="tsd-signature-type">Event</a></h5>
+								</li>
 								<li>
 									<h5>parsedCommand: <a href="commandparser.html" class="tsd-signature-type">CommandParser</a></h5>
 								</li>
@@ -203,7 +272,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L27">Common/Bot.ts:27</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L30">Common/Bot.ts:30</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -220,19 +289,59 @@
 					<a name="runcommand" class="tsd-anchor"></a>
 					<h3>run<wbr>Command</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">run<wbr>Command<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><a href="commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<wbr>Command<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../enums/event.html" class="tsd-signature-type">Event</a>, command<span class="tsd-signature-symbol">: </span><a href="commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L160">Common/Bot.ts:160</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L179">Common/Bot.ts:179</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
+									<h5>event: <a href="../enums/event.html" class="tsd-signature-type">Event</a></h5>
+								</li>
+								<li>
 									<h5>command: <a href="commandparser.html" class="tsd-signature-type">CommandParser</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="runevent" class="tsd-anchor"></a>
+					<h3>run<wbr>Event</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">run<wbr>Event<span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../enums/event.html" class="tsd-signature-type">Event</a>, eventobject<span class="tsd-signature-symbol">: </span><a href="../globals.html#event_object" class="tsd-signature-type">EVENT_OBJECT</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L201">Common/Bot.ts:201</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Run a command based on an event.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>event: <a href="../enums/event.html" class="tsd-signature-type">Event</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Event type.</p>
+									</div>
+								</li>
+								<li>
+									<h5>eventobject: <a href="../globals.html#event_object" class="tsd-signature-type">EVENT_OBJECT</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Event object.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -249,7 +358,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/Bot.ts#L38">Common/Bot.ts:38</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/Bot.ts#L41">Common/Bot.ts:41</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -268,8 +377,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="allmessagescommand.html" class="tsd-kind-icon">All<wbr>Messages<wbr>Command</a>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/event.html" class="tsd-kind-icon">Event</a>
 					</li>
 				</ul>
 				<ul class="current">
@@ -283,7 +392,13 @@
 								<a href="bot.html#commands" class="tsd-kind-icon">commands</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="bot.html#getcommandbyevent" class="tsd-kind-icon">get<wbr>Command<wbr>ByEvent</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="bot.html#getcommandbyname" class="tsd-kind-icon">get<wbr>Command<wbr>ByName</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="bot.html#handleevent" class="tsd-kind-icon">handle<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="bot.html#handlemessage" class="tsd-kind-icon">handle<wbr>Message</a>
@@ -296,6 +411,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="bot.html#runcommand" class="tsd-kind-icon">run<wbr>Command</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="bot.html#runevent" class="tsd-kind-icon">run<wbr>Event</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
 								<a href="bot.html#start" class="tsd-kind-icon">start</a>
@@ -329,6 +447,15 @@
 						<a href="db.html" class="tsd-kind-icon">DB</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="flipcommand.html" class="tsd-kind-icon">Flip<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="guildmemberaddmessagecommand.html" class="tsd-kind-icon">Guild<wbr>Member<wbr>Add<wbr>Message<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="logmessagescommand.html" class="tsd-kind-icon">Log<wbr>Messages<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="pingcommand.html" class="tsd-kind-icon">Ping<wbr>Command</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -339,6 +466,12 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="usersservice.html" class="tsd-kind-icon">Users<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#event_object" class="tsd-kind-icon">EVENT_<wbr>OBJECT</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#message_type" class="tsd-kind-icon">MESSAGE_<wbr>TYPE</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#bot" class="tsd-kind-icon">BOT</a>

@@ -66,6 +66,14 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Demonstrates a simple command that uses arguments.</p>
+					</div>
+					<p>Example message: <code>&gt;test chars=abc,num=123,opt=hellow world</code></p>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -117,7 +125,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Commands/TestCommand.ts#L6">Commands/TestCommand.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Commands/TestCommand.ts#L13">Commands/TestCommand.ts:13</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="testcommand.html" class="tsd-signature-type">TestCommand</a></h4>
@@ -134,7 +142,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#config">config</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Common/CommandBase.ts#L10">Common/CommandBase.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Common/CommandBase.ts#L10">Common/CommandBase.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -152,13 +160,21 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#run">run</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/22d0010/src/Commands/TestCommand.ts#L46">Commands/TestCommand.ts:46</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/be30849/src/Commands/TestCommand.ts#L57">Commands/TestCommand.ts:57</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Called when a command matches config.name.</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>command: <a href="commandparser.html" class="tsd-signature-type">CommandParser</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>Parsed out commamd</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -177,8 +193,8 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class">
-						<a href="allmessagescommand.html" class="tsd-kind-icon">All<wbr>Messages<wbr>Command</a>
+					<li class=" tsd-kind-enum">
+						<a href="../enums/event.html" class="tsd-kind-icon">Event</a>
 					</li>
 					<li class=" tsd-kind-class tsd-is-not-exported">
 						<a href="bot.html" class="tsd-kind-icon">Bot</a>
@@ -208,6 +224,15 @@
 						<a href="db.html" class="tsd-kind-icon">DB</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="flipcommand.html" class="tsd-kind-icon">Flip<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="guildmemberaddmessagecommand.html" class="tsd-kind-icon">Guild<wbr>Member<wbr>Add<wbr>Message<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="logmessagescommand.html" class="tsd-kind-icon">Log<wbr>Messages<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="pingcommand.html" class="tsd-kind-icon">Ping<wbr>Command</a>
 					</li>
 				</ul>
@@ -233,6 +258,12 @@
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="usersservice.html" class="tsd-kind-icon">Users<wbr>Service</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#event_object" class="tsd-kind-icon">EVENT_<wbr>OBJECT</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="../globals.html#message_type" class="tsd-kind-icon">MESSAGE_<wbr>TYPE</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="../globals.html#bot" class="tsd-kind-icon">BOT</a>
