@@ -63,4 +63,6 @@ export class TestCommand extends CommandBase {
     
 }
 ```
+
+## Validation Error Example
 ![TestCommand Output](assets/testcommand-error-validation.png)
