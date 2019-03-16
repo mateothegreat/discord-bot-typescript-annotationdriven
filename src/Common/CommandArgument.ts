@@ -1,5 +1,5 @@
 /*
- * Individual argument received from a message.
+ * Individual argument received from a obj.
  *
  */
 export class CommandArgument {

@@ -1,13 +1,16 @@
-import * as Discord           from 'discord.js';
-import { Message, RichEmbed } from 'discord.js';
-import * as dotenv            from 'dotenv';
-import { CommandBase }        from './CommandBase';
-import { CommandParser }      from './CommandParser';
+import * as Discord                    from 'discord.js';
+import { GuildMember, RichEmbed }      from 'discord.js';
+import * as dotenv                     from 'dotenv';
+import { CommandBase }                 from './CommandBase';
+import { CommandParser, MESSAGE_TYPE } from './CommandParser';
+import { Event }                       from './Event';
+import { EVENT_OBJECT }                from './EventObjectType';
 
 //
 // Load .env into process.env
 //
 dotenv.config();
+
 
 class Bot {
 
@@ -37,11 +40,11 @@ class Bot {
     //
     public start(): void {
 
-        this.client.on('message', (message: Message) => {
-
-            this.handleMessage(message);
-
-        });
+        //
+        // Bind discord.js events
+        //
+        this.client.on('message', (message: MESSAGE_TYPE) => this.handleMessage(Event.MESSAGE, message));
+        this.client.on('guildMemberAdd', (guildMember: GuildMember) => this.handleEvent(Event.GUILD_MEMBER_ADD, guildMember));
 
         this.client.login(process.env.TOKEN);
 
@@ -54,13 +57,26 @@ class Bot {
 
     }
 
+    /**
+     * Handle an incoming event.
+     *
+     * @param event Event type.
+     * @param eventobject Event Object from discord.js.
+     */
+    public handleEvent(event: Event, eventobject: EVENT_OBJECT): void {
+
+        this.runEvent(event, eventobject);
+
+    }
+
     /*
      * Handle an incoming message.
      *
-     * @param Message message Discord message object.
+     * @param event Event type.
+     * @param Message Discord message obj.
      *
      */
-    public handleMessage(message: Message): void {
+    public handleMessage(event: Event, message: MESSAGE_TYPE): void {
 
         //
         // Prevent the bot from talking to itself (this would cause an endless loop).
@@ -72,9 +88,9 @@ class Bot {
             //
             // Run the preCommand validation checks before executing runCommand.
             //
-            if (this.preCommand(command)) {
+            if (this.preCommand(event, command)) {
 
-                this.runCommand(command);
+                this.runCommand(event, command);
 
             }
 
@@ -88,7 +104,7 @@ class Bot {
      * @param CommandParser commandParser The parsed command.
      *
      */
-    public preCommand(parsedCommand: CommandParser): boolean {
+    public preCommand(event: Event, parsedCommand: CommandParser): boolean {
 
         const command: CommandBase = this.getCommandByName(parsedCommand.command);
 
@@ -134,8 +150,8 @@ class Bot {
             //
             if (errors.length > 0) {
 
-                parsedCommand.message.reply(new RichEmbed().setTitle('The following errors ocurred:')
-                                                           .setDescription(errors.join("\n\t")));
+                parsedCommand.obj.reply(new RichEmbed().setTitle('The following errors ocurred:')
+                                                       .setDescription(errors.join("\n\t")));
 
                 return false;
 
@@ -160,11 +176,11 @@ class Bot {
      * @param string commandName Name of the command to run.
      *
      */
-    public runCommand(command: CommandParser): void {
+    public runCommand(event: Event, command: CommandParser): void {
 
         for (let i = 0; i < this.commands.length; i++) {
 
-            if (this.commands[ i ].config.name === command.command || this.commands[ i ].config.name === '*') {
+            if (this.commands[ i ].config.event === event && this.commands[ i ].config.name === command.command || this.commands[ i ].config.name === '*') {
 
                 console.log(`Running Command: ${ this.commands[ i ].config.name }`);
 
@@ -176,11 +192,43 @@ class Bot {
 
     }
 
+    /**
+     * Run a command based on an event.
+     *
+     * @param event Event type.
+     * @param eventobject Event object.
+     */
+    public runEvent(event: Event, eventobject: EVENT_OBJECT): void {
+
+        const command = this.getCommandByEvent(event);
+
+        if (command) {
+
+            command.run(eventobject);
+
+        }
+
+    }
+
     public getCommandByName(name: string): CommandBase {
 
         for (let i = 0; i < this.commands.length; i++) {
 
             if (this.commands[ i ].config.name === name) {
+
+                return this.commands[ i ];
+
+            }
+
+        }
+
+    }
+
+    public getCommandByEvent(event: Event): CommandBase {
+
+        for (let i = 0; i < this.commands.length; i++) {
+
+            if (this.commands[ i ].config.event === event) {
 
                 return this.commands[ i ];
 

@@ -1,8 +1,10 @@
-import { Message }         from 'discord.js';
-import { CommandArgument } from './CommandArgument';
+import { GuildMember, Message } from 'discord.js';
+import { CommandArgument }      from './CommandArgument';
+
+export type MESSAGE_TYPE = Message & GuildMember;
 
 /**
- * Takes in a message and parses it out into a Command Class Instance.
+ * Takes in a obj and parses it out into a Command Class Instance.
  */
 export class CommandParser {
 
@@ -19,21 +21,21 @@ export class CommandParser {
     /**
      * Discord.js Message Object.
      */
-    public message: Message;
+    public obj: MESSAGE_TYPE;
 
     /**
      * @description Class Constructor requiring a Discord.js Message Object.
      *
-     * @param message Discord.js message object.
+     * @param obj Discord.js object.
      *
      */
-    public constructor(message: Message) {
+    public constructor(obj: MESSAGE_TYPE) {
 
         //
         // Match between spaces or to the end if no spaces found.
         // i.e.: `!ping` or `>test chars=abc,num=123
         //
-        const matches = message.content.match(/^(.*?)(?:\s+|$)(.*)/);
+        const matches = obj.content.match(/^(.*?)(?:\s+|$)(.*)/);
 
         if (!!matches && matches.length === 3) {
 
@@ -56,7 +58,7 @@ export class CommandParser {
 
         }
 
-        this.message = message;
+        this.obj = obj;
 
     }
 

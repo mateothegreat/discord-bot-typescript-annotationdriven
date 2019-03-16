@@ -1,5 +1,5 @@
 import { CommandConfig } from './CommandConfig';
-import { CommandParser } from './CommandParser';
+import { EVENT_OBJECT }  from './EventObjectType';
 
 /*
  * Base class that all commands inherit from.
@@ -15,7 +15,7 @@ export class CommandBase {
 
     }
 
-    public run(command: CommandParser): void {
+    public run(command: EVENT_OBJECT): void {
 
     }
 

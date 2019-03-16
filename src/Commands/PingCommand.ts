@@ -1,6 +1,7 @@
 import { CommandBase }   from '../Common/CommandBase';
 import { Command }       from '../Common/CommandDecorator';
 import { CommandParser } from '../Common/CommandParser';
+import { Event }         from '../Common/Event';
 
 /**
  * Replies back to the user with "pong!"
@@ -15,6 +16,7 @@ export class PingCommand extends CommandBase {
         //
         super({
 
+            event: Event.MESSAGE,
             name: '!ping',
             description: 'Simple test command that sends a reply if validation succeeds.',
 
@@ -30,7 +32,7 @@ export class PingCommand extends CommandBase {
      */
     public run(command: CommandParser): void {
 
-        command.message.reply('pong!');
+        command.obj.reply('pong!');
 
     }
 

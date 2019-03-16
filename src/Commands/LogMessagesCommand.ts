@@ -1,9 +1,13 @@
 import { CommandBase }   from '../Common/CommandBase';
 import { Command }       from '../Common/CommandDecorator';
 import { CommandParser } from '../Common/CommandParser';
+import { Event }         from '../Common/Event';
 
+/**
+ * Logs all messages received to the database.
+ */
 @Command
-export class AllMessagesCommand extends CommandBase {
+export class LogMessagesCommand extends CommandBase {
 
     public constructor() {
 
@@ -12,6 +16,7 @@ export class AllMessagesCommand extends CommandBase {
         //
         super({
 
+            event: Event.MESSAGE,
             name: '*',
             description: 'Logs all messages to the database.'
 
@@ -24,7 +29,7 @@ export class AllMessagesCommand extends CommandBase {
     //
     public run(command: CommandParser): void {
 
-        console.log(command.message.content);
+        console.log(command.obj.content);
 
     }
 
