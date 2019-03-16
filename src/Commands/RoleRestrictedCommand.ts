@@ -18,6 +18,7 @@ export class RoleRestrictedCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '!ping',
+            group: 'testing',
             description: 'Simple test command that sends a reply if validation succeeds.',
             roles: [ 'superrole' ]
 

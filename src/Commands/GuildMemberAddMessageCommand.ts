@@ -17,6 +17,8 @@ export class GuildMemberAddMessageCommand extends CommandBase {
         super({
 
             event: Event.GUILD_MEMBER_ADD,
+            name: 'guildMemberAdd',
+            group: 'events',
             description: 'Sends a obj when a new user is added to the guild.',
 
         });

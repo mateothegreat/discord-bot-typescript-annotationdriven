@@ -21,6 +21,7 @@ export class WikipediaSearchCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '?wiki',
+            group: 'search',
             description: 'Replies back to the user with a wikipedia search result.',
 
         });

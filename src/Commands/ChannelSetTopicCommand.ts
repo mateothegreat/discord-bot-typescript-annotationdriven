@@ -19,6 +19,7 @@ export class ChannelSetTopicCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '>topic',
+            group: 'channels',
             description: 'Sets a channel topic. Usage: >topic channel=mychannelname,topic=my new topic',
             roles: [ 'admin' ],
             params: [ {

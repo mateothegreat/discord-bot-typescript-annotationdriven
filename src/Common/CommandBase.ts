@@ -7,7 +7,7 @@ import { EVENT_OBJECT }  from './EventObjectType';
  */
 export class CommandBase {
 
-    public config: any;
+    public config: CommandConfig;
 
     public constructor(config: CommandConfig) {
 

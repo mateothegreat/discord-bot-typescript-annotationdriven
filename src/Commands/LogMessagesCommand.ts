@@ -18,6 +18,7 @@ export class LogMessagesCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '*',
+            group: 'events',
             description: 'Logs all messages to the database.'
 
         });

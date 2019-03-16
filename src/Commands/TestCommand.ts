@@ -21,6 +21,7 @@ export class TestCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '>test',
+            group: 'testing',
             description: 'Simple test command that sends a reply if validation succeeds.',
             params: [ {
 

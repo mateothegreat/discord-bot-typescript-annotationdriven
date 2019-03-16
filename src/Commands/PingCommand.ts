@@ -18,6 +18,7 @@ export class PingCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '!ping',
+            group: 'util',
             description: 'Simple test command that sends a reply.',
 
         });

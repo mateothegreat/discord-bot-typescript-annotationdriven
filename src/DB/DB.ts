@@ -1,5 +1,7 @@
 import { Connection, createConnection } from 'typeorm';
+import { Logger }                       from '../Common/Logger';
 import { ChatMessage }                  from './Entities/ChatMessage';
+import { KarmaPoint }                   from './Entities/KarmaPoint';
 import { User }                         from './Entities/User';
 
 export class DB {
@@ -23,7 +25,8 @@ export class DB {
                 entities: [
 
                     User,
-                    ChatMessage
+                    ChatMessage,
+                    KarmaPoint
 
                 ],
                 synchronize: true,
@@ -31,7 +34,7 @@ export class DB {
 
             });
 
-            console.log('Connected to database');
+            Logger.log('Connected to database');
 
         } catch (e) {
 

@@ -20,6 +20,7 @@ export class UserUnBanCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '>unban',
+            group: 'users',
             description: 'UnBans a user from the server. Usage: >unban name=someusername',
             roles: [ 'admin' ],
             params: [ {

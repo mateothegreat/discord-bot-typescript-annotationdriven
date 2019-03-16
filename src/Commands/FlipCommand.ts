@@ -4,7 +4,7 @@ import { CommandParser } from '../Common/CommandParser';
 import { Event }         from '../Common/Event';
 
 /**
- * Replies back to the user with a random selection between "|".
+ * Replies back to the user with a random selection between "|". Usage: >flip heads|tails|whoknows
  */
 @Command
 export class FlipCommand extends CommandBase {
@@ -18,7 +18,8 @@ export class FlipCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '!flip',
-            description: 'Replies back to the user with a random selection between "|".',
+            group: 'fun',
+            description: 'Replies back to the user with a random selection between "|". Usage: >flip heads|tails|whoknows',
 
         });
 

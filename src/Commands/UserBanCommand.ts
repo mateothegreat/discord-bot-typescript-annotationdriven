@@ -20,6 +20,7 @@ export class UserBanCommand extends CommandBase {
 
             event: Event.MESSAGE,
             name: '>ban',
+            group: 'users',
             description: 'Bans a user from the server. Usage: >ban name=someusername',
             roles: [ 'admin' ],
             params: [ {

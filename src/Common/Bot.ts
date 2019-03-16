@@ -5,6 +5,7 @@ import { CommandBase }                 from './CommandBase';
 import { CommandParser, MESSAGE_TYPE } from './CommandParser';
 import { Event }                       from './Event';
 import { EVENT_OBJECT }                from './EventObjectType';
+import { Logger }                      from './Logger';
 
 //
 // Load .env into process.env
@@ -14,24 +15,26 @@ dotenv.config();
 
 class Bot {
 
-    //
-    // Discord.js Client
-    //
+    /**
+     * Discord.js Client
+     */
     public client: any = new Discord.Client();
 
-    //
-    // Array of Command Class References
-    //
-    private commands: Array<CommandBase> = [];
+    /**
+     * Array of Command Class References
+     */
+    public commands: Array<CommandBase> = [];
 
-    //
-    // Called by the @Command decorated classes
-    //
+    /**
+     * Called by the @Command decorated classes
+     *
+     * @param commandRef Command class reference.
+     */
     public register(commandRef: CommandBase): void {
 
         this.commands.push(commandRef);
 
-        console.log(`Command Registerd: ${ commandRef.config.name }`);
+        Logger.log(`Command Registerd: ${ commandRef.config.name } (${ commandRef.config.description })`);
 
     }
 
@@ -53,7 +56,7 @@ class Bot {
         //
         require('../Commands');
 
-        console.log('Bot Started');
+        Logger.log('Bot Started');
 
     }
 
@@ -107,11 +110,26 @@ class Bot {
     public preCommand(event: Event, parsedCommand: CommandParser): boolean {
 
         const command: CommandBase = this.getCommandByName(parsedCommand.command);
-
+  
         if (command) {
 
             let errors: string[] = [];
 
+            //
+            // Roles Validation
+            //
+            if (command.config.roles) {
+
+                for (let i = 0; i < command.config.roles.length; i++) {
+
+
+                }
+
+            }
+
+            //
+            // Parameter Validation
+            //
             if (command.config.params) {
 
                 for (let i = 0; i < command.config.params.length; i++) {
