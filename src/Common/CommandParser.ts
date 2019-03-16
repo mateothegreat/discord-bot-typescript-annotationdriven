@@ -29,7 +29,11 @@ export class CommandParser {
      */
     public constructor(message: Message) {
 
-        const matches = message.content.match(/^(.*?)\s+(.*)/);
+        //
+        // Match between spaces or to the end if no spaces found.
+        // i.e.: `!ping` or `>test chars=abc,num=123
+        //
+        const matches = message.content.match(/^(.*?)(?:\s+|$)(.*)/);
 
         if (!!matches && matches.length === 3) {
 

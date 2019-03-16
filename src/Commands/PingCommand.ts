@@ -15,29 +15,8 @@ export class PingCommand extends CommandBase {
         //
         super({
 
-            name: '>test',
+            name: '!ping',
             description: 'Simple test command that sends a reply if validation succeeds.',
-            params: [ {
-
-                name: 'chars',
-                description: 'An argument containing a word.',
-                required: true,
-                pattern: '\\w+'
-
-            }, {
-
-                name: 'num',
-                description: 'An argument containing numbers.',
-                required: true,
-                pattern: '\\d+'
-
-            }, {
-
-                name: 'opt',
-                description: 'An optional argument.',
-                required: false,
-
-            } ]
 
         });
 
@@ -51,7 +30,7 @@ export class PingCommand extends CommandBase {
      */
     public run(command: CommandParser): void {
 
-        command.message.reply('Test received!');
+        command.message.reply('pong!');
 
     }
 

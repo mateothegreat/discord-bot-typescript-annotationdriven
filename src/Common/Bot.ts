@@ -92,37 +92,40 @@ class Bot {
 
         const command: CommandBase = this.getCommandByName(parsedCommand.command);
 
-        if (!!command) {
+        if (command) {
 
             let errors: string[] = [];
 
-            for (let i = 0; i < command.config.params.length; i++) {
+            if (command.config.params) {
 
-                const argument = parsedCommand.getArgumentByName(command.config.params[ i ].name);
+                for (let i = 0; i < command.config.params.length; i++) {
 
-                if (command.config.params[ i ].required && !argument) {
+                    const argument = parsedCommand.getArgumentByName(command.config.params[ i ].name);
 
-                    errors.push(`The parameter "${ command.config.params[ i ].name }" (${ command.config.params[ i ].description }) is required.`);
+                    if (command.config.params[ i ].required && !argument) {
 
-                } else {
+                        errors.push(`The parameter "${ command.config.params[ i ].name }" (${ command.config.params[ i ].description }) is required.`);
 
-                    //
-                    // Check to see if the argument passed exists in the commands accetpable parameters.
-                    //
-                    if (argument) {
+                    } else {
 
-                        const regex = new RegExp(command.config.params[ i ].pattern);
+                        //
+                        // Check to see if the argument passed exists in the commands accetpable parameters.
+                        //
+                        if (argument) {
 
-                        if (!argument.value.match(regex)) {
+                            const regex = new RegExp(command.config.params[ i ].pattern);
 
-                            errors.push(`The parameter "${ command.config.params[ i ].name }" with the value "${ argument.value }" is invalid (Acceptable pattern: ${ command.config.params[ i ].pattern }).`);
+                            if (!argument.value.match(regex)) {
+
+                                errors.push(`The parameter "${ command.config.params[ i ].name }" with the value "${ argument.value }" is invalid (Acceptable pattern: ${ command.config.params[ i ].pattern }).`);
+
+                            }
 
                         }
 
                     }
 
                 }
-
 
             }
 

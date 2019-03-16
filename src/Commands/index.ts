@@ -3,3 +3,4 @@
  */
 export * from './AllMessagesCommand';
 export * from './TestCommand';
+export * from './PingCommand';
