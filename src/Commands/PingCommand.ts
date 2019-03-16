@@ -51,8 +51,6 @@ export class PingCommand extends CommandBase {
      */
     public run(command: CommandParser): void {
 
-        // console.log(command);
-
         command.message.reply('Test received!');
 
     }
