@@ -13,6 +13,8 @@ export * from './MacroDeleteCommand';
 export * from './MacroGetCommand';
 export * from './MacroListCommand';
 export * from './PingCommand';
+export * from './ProjectAddCommand';
+export * from './ProjectGetCommand';
 export * from './TestCommand';
 export * from './UserBanCommand';
 export * from './UserUnBanCommand';

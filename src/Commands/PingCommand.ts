@@ -33,7 +33,7 @@ export class PingCommand extends CommandBase {
      */
     public run(command: CommandParser): void {
 
-        command.obj.reply('pong!');
+        command.obj.reply('pong! <#544005109042905101>');
 
     }
 

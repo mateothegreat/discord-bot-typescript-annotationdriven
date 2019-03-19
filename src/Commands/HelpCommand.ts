@@ -76,8 +76,12 @@ export class HelpCommand extends CommandBase {
 
                 }
 
-                groups[ BOT.commands[ i ].config.group ].push(`\t**${ BOT.commands[ i ].config.name }**: ${ BOT.commands[ i ].config.description }`);
+                if (BOT.commands[ i ].config.name !== '*') {
 
+                    groups[ BOT.commands[ i ].config.group ].push(`\t**${ BOT.commands[ i ].config.name }**: ${ BOT.commands[ i ].config.description }`);
+
+                }
+ 
             }
 
         }

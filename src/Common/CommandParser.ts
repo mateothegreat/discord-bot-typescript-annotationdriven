@@ -19,6 +19,11 @@ export class CommandParser {
     public arguments: CommandArgument[] = [];
 
     /**
+     * Arguments parsed out between commas, as an object using name as the key.
+     */
+    public namedarguments: any = {};
+
+    /**
      * Discord.js Message Object.
      */
     public obj: MESSAGE_TYPE;
@@ -46,6 +51,8 @@ export class CommandParser {
             for (let i = 0; i < split.length; i++) {
 
                 const splitRow = split[ i ].split('=');
+
+                this.namedarguments[ splitRow[ 0 ] ] = splitRow[ 1 ];
 
                 this.arguments.push({
 

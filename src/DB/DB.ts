@@ -3,6 +3,7 @@ import { Logger }                       from '../Common/Logger';
 import { ChatMessage }                  from './Entities/ChatMessage';
 import { KarmaPoint }                   from './Entities/KarmaPoint';
 import { Macro }                        from './Entities/Macro';
+import { ProjectIdea }                  from './Entities/ProjectIdea';
 import { User }                         from './Entities/User';
 
 export class DB {
@@ -28,7 +29,8 @@ export class DB {
                     User,
                     ChatMessage,
                     KarmaPoint,
-                    Macro
+                    Macro,
+                    ProjectIdea
 
                 ],
                 synchronize: true,

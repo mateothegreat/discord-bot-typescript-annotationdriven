@@ -57,7 +57,7 @@ export class MacroAddCommand extends CommandBase {
         const result = await DB.connection.getRepository(Macro)
                                .createQueryBuilder('Macro')
                                .select([ '*' ])
-                               .where('name = :name', { name: command.arguments[ 0 ].value })
+                               .where('name = :name', { name: command.namedarguments.name })
                                .getRawOne();
 
         //
@@ -65,8 +65,8 @@ export class MacroAddCommand extends CommandBase {
         //
         if (result) {
 
-            result.name = command.arguments[ 0 ].value;
-            result.message = command.arguments[ 1 ].value;
+            result.name = command.namedarguments.name;
+            result.message = command.namedarguments.message;
 
             DB.connection
               .createQueryBuilder()
@@ -75,18 +75,18 @@ export class MacroAddCommand extends CommandBase {
               .where('id = :id', { id: result.id })
               .execute();
 
-            command.obj.reply(new RichEmbed().setTitle('Update Macro').setDescription(`The macro \`++${ command.arguments[ 0 ].value }\` has been updated!`));
+            command.obj.reply(new RichEmbed().setTitle('Update Macro').setDescription(`The macro \`++${ command.namedarguments.name }\` has been updated!`));
 
         } else {
 
             const macro: Macro = new Macro();
 
-            macro.name = command.arguments[ 0 ].value;
-            macro.message = command.arguments[ 1 ].value;
+            macro.name = command.namedarguments.name;
+            macro.message = command.namedarguments.message;
 
             DB.connection.manager.save(macro);
 
-            command.obj.reply(new RichEmbed().setTitle('Create Macro').setDescription(`The macro \`++${ command.arguments[ 0 ].value }\` has been created!`));
+            command.obj.reply(new RichEmbed().setTitle('Create Macro').setDescription(`The macro \`++${ command.namedarguments.name }\` has been created!`));
 
         }
 
