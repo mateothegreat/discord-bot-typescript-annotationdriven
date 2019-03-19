@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>HelpCommand | discord-bot-typescript-annotationdriven</title>
+	<title>MacroListCommand | discord-bot-typescript-annotationdriven</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,10 +56,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="helpcommand.html">HelpCommand</a>
+					<a href="macrolistcommand.html">MacroListCommand</a>
 				</li>
 			</ul>
-			<h1>Class HelpCommand</h1>
+			<h1>Class MacroListCommand</h1>
 		</div>
 	</div>
 </header>
@@ -69,8 +69,7 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>Displays help information in a direct message.
-						Will only display commands available to that user based on role(s).</p>
+						<p>Display all saved macros. Usage: ++list</p>
 					</div>
 				</div>
 			</section>
@@ -81,7 +80,7 @@
 						<a href="commandbase.html" class="tsd-signature-type">CommandBase</a>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">HelpCommand</span>
+								<span class="target">MacroListCommand</span>
 							</li>
 						</ul>
 					</li>
@@ -94,19 +93,19 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="helpcommand.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="macrolistcommand.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-inherited">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="helpcommand.html#config" class="tsd-kind-icon">config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="macrolistcommand.html#config" class="tsd-kind-icon">config</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="helpcommand.html#run" class="tsd-kind-icon">run</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="macrolistcommand.html#run" class="tsd-kind-icon">run</a></li>
 							</ul>
 						</section>
 					</div>
@@ -118,17 +117,17 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Help<wbr>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="helpcommand.html" class="tsd-signature-type">HelpCommand</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Macro<wbr>List<wbr>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="macrolistcommand.html" class="tsd-signature-type">MacroListCommand</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Commands/HelpCommand.ts#L13">Commands/HelpCommand.ts:13</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Commands/MacroListCommand.ts#L13">Commands/MacroListCommand.ts:13</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="helpcommand.html" class="tsd-signature-type">HelpCommand</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="macrolistcommand.html" class="tsd-signature-type">MacroListCommand</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -153,14 +152,14 @@
 					<a name="run" class="tsd-anchor"></a>
 					<h3>run</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><a href="commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">run<span class="tsd-signature-symbol">(</span>command<span class="tsd-signature-symbol">: </span><a href="commandparser.html" class="tsd-signature-type">CommandParser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="commandbase.html">CommandBase</a>.<a href="commandbase.html#run">run</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Commands/HelpCommand.ts#L37">Commands/HelpCommand.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Commands/MacroListCommand.ts#L38">Commands/MacroListCommand.ts:38</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -177,7 +176,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -229,24 +228,9 @@
 					<li class=" tsd-kind-class">
 						<a href="guildmemberaddmessagecommand.html" class="tsd-kind-icon">Guild<wbr>Member<wbr>Add<wbr>Message<wbr>Command</a>
 					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-class">
+					<li class=" tsd-kind-class">
 						<a href="helpcommand.html" class="tsd-kind-icon">Help<wbr>Command</a>
-						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-								<a href="helpcommand.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="helpcommand.html#config" class="tsd-kind-icon">config</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="helpcommand.html#run" class="tsd-kind-icon">run</a>
-							</li>
-						</ul>
 					</li>
-				</ul>
-				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="karmaleaderboardcommand.html" class="tsd-kind-icon">Karma<wbr>Leaderboard<wbr>Command</a>
 					</li>
@@ -274,9 +258,24 @@
 					<li class=" tsd-kind-class">
 						<a href="macrogetcommand.html" class="tsd-kind-icon">Macro<wbr>Get<wbr>Command</a>
 					</li>
-					<li class=" tsd-kind-class">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class">
 						<a href="macrolistcommand.html" class="tsd-kind-icon">Macro<wbr>List<wbr>Command</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+								<a href="macrolistcommand.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="macrolistcommand.html#config" class="tsd-kind-icon">config</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="macrolistcommand.html#run" class="tsd-kind-icon">run</a>
+							</li>
+						</ul>
 					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-class">
 						<a href="pingcommand.html" class="tsd-kind-icon">Ping<wbr>Command</a>
 					</li>

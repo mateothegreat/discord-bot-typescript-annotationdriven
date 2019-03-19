@@ -96,6 +96,7 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="commandparser.html#arguments" class="tsd-kind-icon">arguments</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="commandparser.html#command" class="tsd-kind-icon">command</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="commandparser.html#namedarguments" class="tsd-kind-icon">namedarguments</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-class"><a href="commandparser.html#obj" class="tsd-kind-icon">obj</a></li>
 							</ul>
 						</section>
@@ -120,7 +121,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Common/CommandParser.ts#L24">Common/CommandParser.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Common/CommandParser.ts#L29">Common/CommandParser.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -154,7 +155,7 @@
 					<div class="tsd-signature tsd-kind-icon">arguments<span class="tsd-signature-symbol">:</span> <a href="commandargument.html" class="tsd-signature-type">CommandArgument</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Common/CommandParser.ts#L19">Common/CommandParser.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Common/CommandParser.ts#L19">Common/CommandParser.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -169,7 +170,7 @@
 					<div class="tsd-signature tsd-kind-icon">command<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Common/CommandParser.ts#L14">Common/CommandParser.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Common/CommandParser.ts#L14">Common/CommandParser.ts:14</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -179,12 +180,27 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="namedarguments" class="tsd-anchor"></a>
+					<h3>namedarguments</h3>
+					<div class="tsd-signature tsd-kind-icon">namedarguments<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Common/CommandParser.ts#L24">Common/CommandParser.ts:24</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Arguments parsed out between commas, as an object using name as the key.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="obj" class="tsd-anchor"></a>
 					<h3>obj</h3>
 					<div class="tsd-signature tsd-kind-icon">obj<span class="tsd-signature-symbol">:</span> <a href="../globals.html#message_type" class="tsd-signature-type">MESSAGE_TYPE</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Common/CommandParser.ts#L24">Common/CommandParser.ts:24</a></li>
+							<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Common/CommandParser.ts#L29">Common/CommandParser.ts:29</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -206,7 +222,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/e3b2838/src/Common/CommandParser.ts#L73">Common/CommandParser.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/mateothegreat/discord-bot-typescript-annotationdriven/blob/6be126a/src/Common/CommandParser.ts#L80">Common/CommandParser.ts:80</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -281,6 +297,9 @@
 								<a href="commandparser.html#command" class="tsd-kind-icon">command</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="commandparser.html#namedarguments" class="tsd-kind-icon">namedarguments</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="commandparser.html#obj" class="tsd-kind-icon">obj</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -318,7 +337,31 @@
 						<a href="logger.html" class="tsd-kind-icon">Logger</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="macro.html" class="tsd-kind-icon">Macro</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="macroaddcommand.html" class="tsd-kind-icon">Macro<wbr>Add<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="macrodeletecommand.html" class="tsd-kind-icon">Macro<wbr>Delete<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="macrogetcommand.html" class="tsd-kind-icon">Macro<wbr>Get<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="macrolistcommand.html" class="tsd-kind-icon">Macro<wbr>List<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="pingcommand.html" class="tsd-kind-icon">Ping<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="projectaddcommand.html" class="tsd-kind-icon">Project<wbr>Add<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="projectgetcommand.html" class="tsd-kind-icon">Project<wbr>Get<wbr>Command</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="projectidea.html" class="tsd-kind-icon">Project<wbr>Idea</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="rolerestrictedcommand.html" class="tsd-kind-icon">Role<wbr>Restricted<wbr>Command</a>
